@@ -1,5 +1,5 @@
-blank-python-project
-====================
+extended_train_test_split
+=========================
 
 .. toctree::
    :maxdepth: 4
