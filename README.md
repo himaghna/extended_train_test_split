@@ -20,6 +20,8 @@
 Adding a new splitting method should take on this format:
 
 ```python
+from sklearn.model_selection import train_test_split
+
 def random(
     X,
     y=None,
