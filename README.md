@@ -1,14 +1,6 @@
 # extended_train_test_split
-## Using this template:
-1. Run `start_project.py`, which will gather some info and rename everything.
-2. Add tests.
-3. Add your source code to your source directory.
-4. Add your requirements to `./requirements.txt`.
-5. Curate examples as python notebooks and add them to `./examples/`.
-6. Replace `./extended_train_test_split_logo.png` with your logo.
-7. Delete this line and everything above it, as well as `start_project.py`.
 
-<h1 align="center">BlankPythonProject</h1> 
+<h1 align="center">extended_train_test_split</h1> 
 <h3 align="center">Algorithmic train:test splitting for molecules, images, and arbitrary arrays.</h3>
 
 <p align="center">  
@@ -23,3 +15,61 @@
 
 ## Online Documentation
 [Click here to read the docuemtntation](https://JacksonBurns.github.io/extended_train_test_split/)
+
+## Extending Functionality
+Adding a new splitting method should take on this format:
+
+```python
+def random(
+    X,
+    y=None,
+    test_size=None,
+    train_size=None,
+    random_state=None,
+    shuffle=True,
+    stratify=None,
+):
+    return train_test_split(
+        X,
+        y,
+        test_size=test_size,
+        train_size=train_size,
+        random_state=random_state,
+        shuffle=shuffle,
+        stratify=stratify,
+    )
+```
+
+It can be as simple as a passthrough to a another `train_test_split`, or it can be an original implementation that results in X and y being split into two lists.
+
+
+Adding a new interface should take on this format:
+
+```python
+from extended_train_test_split import train_test_split
+
+def train_test_split_INTERFACE(
+    INTERFACE_input,
+    INTERFACE_ARGS,
+    y: np.array = None,
+    test_size: float = 0.25,
+    train_size: float = 0.75,
+    splitter: str = 'random',
+    hopts: dict = {},
+    INTERFACE_hopts: dict = {},
+):
+    # turn the INTERFACE_input into an input X
+    # based on INTERFACE ARGS where INTERFACE_hopts
+    # specifies additional behavior
+    X = []
+    
+    # call train test split with this input
+    return train_test_split(
+        X,
+        y=y,
+        test_size=test_size,
+        train_size=train_size,
+        splitter=splitter,
+        hopts=hopts,
+    )
+```

@@ -12,9 +12,12 @@ X_train, X_test, y_train, y_test = train_test_split(
     np.array([10, 11, 12]),
     test_size=0.2,
     train_size=0.8,
-    shuffle=True,
     splitter='random',
-    random_state=42,
+    hopts={
+        "shuffle": True,
+        "random_state": 42,
+    }
+
 )
 
 print(X_train, X_test, y_train, y_test)
@@ -24,7 +27,6 @@ X_train, X_test, y_train, y_test = train_test_split_molecules(
     np.array([10, 11, 12, 13, 14]),
     test_size=0.2,
     train_size=0.8,
-    shuffle=True,
     return_as='fprint',
     splitter='random',
     hopts={'random_state': 42},

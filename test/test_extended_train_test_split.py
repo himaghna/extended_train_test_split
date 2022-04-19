@@ -2,7 +2,14 @@ import os
 import sys
 import unittest
 
-# from extended_train_test_split import extended_train_test_split
+import numpy as np
+
+from extended_train_test_split.interfaces import (
+    train_test_split_molecules,
+    train_test_split_images,
+)
+
+from extended_train_test_split import train_test_split
 
 
 class Test_extended_train_test_split(unittest.TestCase):
@@ -14,10 +21,20 @@ class Test_extended_train_test_split(unittest.TestCase):
     def setUpClass(self):
         return
 
-    def test_placeholder(self):
+    def test_train_test_split(self):
         """
         """
-        self.assertTrue(1+1 == 2)
+        X_train, X_test, y_train, y_test = train_test_split(
+            np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
+            np.array([10, 11, 12]),
+            test_size=0.2,
+            train_size=0.8,
+            shuffle=True,
+            splitter='random',
+            random_state=42,
+        )
+        for elt, ans in zip(X_train.flatten(), [4, 5, 6, 7, 8, 9]):
+            self.assertEqual(elt, ans)
 
 
 if __name__ == '__main__':

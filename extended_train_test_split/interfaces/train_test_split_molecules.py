@@ -10,7 +10,6 @@ def train_test_split_molecules(
     y: np.array = None,
     test_size: float = 0.25,
     train_size: float = 0.75,
-    shuffle: bool = False,
     splitter: str = 'random',
     fingerprint: str = 'morgan_fingerprint',
     return_as: str = 'fprint',
@@ -33,7 +32,6 @@ def train_test_split_molecules(
         y=y,
         test_size=test_size,
         train_size=train_size,
-        shuffle=shuffle,
         splitter=splitter,
-        **hopts,
+        hopts=hopts,
     )

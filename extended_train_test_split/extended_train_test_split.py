@@ -11,7 +11,7 @@ def train_test_split(
     test_size: float = 0.25,
     train_size: float = 0.75,
     splitter: str = 'random',
-    **hopts,
+    hopts: dict = {},
 ):
     if splitter == 'random':
         return random(
