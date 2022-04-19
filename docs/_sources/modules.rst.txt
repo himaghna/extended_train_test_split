@@ -4,7 +4,7 @@ extended_train_test_split
 .. toctree::
    :maxdepth: 4
 
-   blankpythonproject
+   example_usage
+   extended_train_test_split
    setup
-   start_project
    test
