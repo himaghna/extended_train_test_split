@@ -26,12 +26,12 @@ cwd = pathlib.Path(__file__).parent
 README = (cwd / "README.md").read_text()
 
 setup(
-    name="blpyproj",
-    version=get_version("blankpythonproject/__init__.py"),
-    description="Catchy slogan.",
+    name="extended_train_test_split",
+    version=get_version("extended_train_test_split/__init__.py"),
+    description="Algorithmic train:test splitting for molecules, images, and arbitrary arrays.",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/JacksonBurns/blank-python-project",
+    url="https://github.com/JacksonBurns/extended_train_test_split",
     author="Jackson Burns",
     author_email="jburnsky@udel.edu",
     license="MIT",
