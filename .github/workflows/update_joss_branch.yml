@@ -13,5 +13,5 @@ jobs:
         with:
           type: now
           from_branch: main
-          target_branch: joss
+          target_branch: joss-paper
           github_token: ${{ github.token }}
