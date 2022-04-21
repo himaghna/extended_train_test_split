@@ -13,6 +13,4 @@ jobs:
           git config user.email github-actions@github.com
           git checkout joss-paper
           git merge origin/main
-          git add .
-          git commit -m "Automated Update from Master" -a || true
-          git push -f
+          git push
