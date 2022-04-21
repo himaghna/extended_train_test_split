@@ -1,5 +1,3 @@
-# extended_train_test_split
-
 <h1 align="center">extended_train_test_split</h1> 
 <h3 align="center">Algorithmic train:test splitting for molecules, images, and arbitrary arrays.</h3>
 
@@ -90,3 +88,7 @@ def train_test_split_INTERFACE(
         hopts=hopts,
     )
 ```
+
+## JOSS Branch
+`paper.md` is stored in a separate branch aptly named `joss-paper`. To push changes from the `main` branch into the `joss-paper` branch, run the `Update JOSS Branch` workflow.
+
