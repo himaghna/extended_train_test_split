@@ -16,6 +16,21 @@
 ## Online Documentation
 [Click here to read the docuemtntation](https://JacksonBurns.github.io/extended_train_test_split/)
 
+## Background
+
+### Rational Splitting Algorithms
+While much machine learning is done with a random choice between training/test/validation data, an alternative is the use of so-called "rational" splitting algorithms. These approaches use some similarity-based algorithm to divide data into sets. Some of these algorithms include Kennard-Stone, minimal test set dissimilarity, and sphere exclusion algorithms [as discussed by Tropsha et. al](https://pubs.acs.org/doi/pdf/10.1021/ci300338w) as well as the DUPLEX, OptiSim, D-optimal, as discussed in [Applied Chemoinformatics: Achievements and Future Opportunities](https://www.wiley.com/en-us/Applied+Chemoinformatics%3A+Achievements+and+Future+Opportunities-p-9783527806546). Some clustering-based splitting techniques have also been introduced, such as [DBSCAN](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.1016.890&rep=rep1&type=pdf).
+
+## Splitting Algorithms
+ - Random
+ - Kennard-Stone (KS)
+ - Minimal Test Set Dissimilarity
+ - Sphere Exclusion
+ - DUPLEX
+ - OptiSim
+ - D-Optimal
+ - Density-Based Spatial Clustering of Applications with Noise (DBSCAN)
+
 ## Extending Functionality
 Adding a new splitting method should take on this format:
 
