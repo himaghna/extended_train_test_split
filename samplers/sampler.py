@@ -57,5 +57,3 @@ class Sampler(abc):
 
         """
         return [self.get_next_sample_id() for _ in range(n_samples)]
-
-
