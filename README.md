@@ -14,7 +14,7 @@
 </p>
 
 ## Online Documentation
-[Click here to read the docuemtntation](https://JacksonBurns.github.io/extended_train_test_split/)
+[Click here to read the documentation](https://JacksonBurns.github.io/extended_train_test_split/)
 
 ## Background
 
