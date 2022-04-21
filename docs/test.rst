@@ -1,6 +1,15 @@
 test package
 ============
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   test.interfaces
+   test.splitters
+
 Submodules
 ----------
 
