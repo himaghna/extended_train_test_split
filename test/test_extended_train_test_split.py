@@ -4,11 +4,6 @@ import unittest
 
 import numpy as np
 
-from extended_train_test_split.interfaces import (
-    train_test_split_molecules,
-    train_test_split_images,
-)
-
 from extended_train_test_split import train_test_split
 
 
@@ -29,9 +24,11 @@ class Test_extended_train_test_split(unittest.TestCase):
             np.array([10, 11, 12]),
             test_size=0.2,
             train_size=0.8,
-            shuffle=True,
             splitter='random',
-            random_state=42,
+            hopts={
+                'shuffle': True,
+                'random_state': 42,
+            }
         )
         for elt, ans in zip(X_train.flatten(), [4, 5, 6, 7, 8, 9]):
             self.assertEqual(elt, ans)
