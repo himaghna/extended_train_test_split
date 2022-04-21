@@ -1,5 +1,3 @@
-# extended_train_test_split
-
 <h1 align="center">extended_train_test_split</h1> 
 <h3 align="center">Algorithmic train:test splitting for molecules, images, and arbitrary arrays.</h3>
 
