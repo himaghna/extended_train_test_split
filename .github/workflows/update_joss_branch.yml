@@ -1,0 +1,18 @@
+name: Update JOSS Branch
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git checkout joss-paper
+          git merge origin/main
+          git add .
+          git commit -m "Automated Update from Master" -a || true
+          git push -f
